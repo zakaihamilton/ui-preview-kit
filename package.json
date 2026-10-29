@@ -1,6 +1,6 @@
 {
-  "name": "@zakaihamilton/ui-preview-kit",
-  "version": "0.1.1",
+  "name": "ui-preview-kit",
+  "version": "0.1.2",
   "description": "Shared toolbar, icon, and dropdown components for local UI previews.",
   "packageManager": "pnpm@10.33.0",
   "type": "module",
@@ -14,7 +14,7 @@
     "./styles.css": "./dist/styles.css"
   },
   "bin": {
-    "ui-preview-init": "./bin/ui-preview-init.mjs"
+    "ui-preview-init": "bin/ui-preview-init.mjs"
   },
   "files": [
     "bin",
@@ -33,5 +33,21 @@
   "devDependencies": {
     "@types/react": "^19.2.0",
     "typescript": "^5.9.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakaihamilton/ui-preview-kit.git"
+  },
+  "homepage": "https://github.com/zakaihamilton/ui-preview-kit#readme",
+  "bugs": {
+    "url": "https://github.com/zakaihamilton/ui-preview-kit/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "nextjs",
+    "ui-preview",
+    "preview-toolbar",
+    "development-tools"
+  ]
 }

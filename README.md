@@ -26,7 +26,7 @@ The package owns presentation components. It does not own an application’s rou
 From the root of a Next.js project using the App Router:
 
 ```sh
-pnpm add github:zakaihamilton/ui-preview-kit#v0.1.1
+pnpm add ui-preview-kit@^0.1.2
 pnpm exec ui-preview-init
 ```
 
@@ -40,7 +40,7 @@ Replace the sample screens with your own synthetic fixtures and preview-specific
 'use client';
 
 import { useState } from 'react';
-import { PreviewDropdown, PreviewToolbar } from '@zakaihamilton/ui-preview-kit';
+import { PreviewDropdown, PreviewToolbar } from 'ui-preview-kit';
 
 const screens = [
   { value: 'overview', label: 'Overview' },
@@ -92,7 +92,7 @@ Treat preview actions as simulations. Use synthetic data, prevent real form subm
 Use this prompt when adding the kit to an existing application:
 
 ```text
-You are working in an existing application. Add an isolated UI Preview experience using `@zakaihamilton/ui-preview-kit`.
+You are working in an existing application. Add an isolated UI Preview experience using `ui-preview-kit`.
 
 First inspect the framework, routing tree, login and authentication flow, middleware, protected layouts, existing UI components, and test setup. Identify exactly where auth is enforced before changing files.
 
@@ -103,7 +103,7 @@ Requirements:
 - If middleware redirects every unauthenticated request to login, add only a narrowly scoped exception for `/ui-preview` in development. Do not allow that exception in production or for other routes.
 - Reuse presentational UI components where practical. If they require auth context, provide a preview-only mock provider or wrapper; do not change the real provider or inject mock data globally.
 - Use synthetic fixtures only. Do not read real user data, call authenticated or production APIs, or submit forms or mutations. Make preview actions no-ops or simulated actions and explain that they are simulated.
-- Install `@zakaihamilton/ui-preview-kit` at the current documented tag if it is not already installed. Use `PreviewToolbar`, `PreviewDropdown`, and the shared “UI Preview” icon for the preview controls; keep page-specific fixtures and state in this application.
+- Install `ui-preview-kit@^0.1.2` from npm if it is not already installed. Use `PreviewToolbar`, `PreviewDropdown`, and the shared “UI Preview” icon for the preview controls; keep page-specific fixtures and state in this application.
 - Preserve existing routes and visual behavior. Add or update focused tests for the preview controls and route guard.
 
 After implementation, report the files changed, how the preview stays separate from login/authentication, and the checks you ran. Do not claim production safety unless the production route guard was verified.
@@ -114,7 +114,7 @@ After implementation, report the files changed, how the preview stays separate f
 If Vitest reports an unknown `.css` extension while importing this package, inline it so Vite can transform the package stylesheet. Add this under `test` in `vitest.config.ts`:
 
 ```ts
-server: { deps: { inline: ['@zakaihamilton/ui-preview-kit'] } },
+server: { deps: { inline: ['ui-preview-kit'] } },
 ```
 
 ## License

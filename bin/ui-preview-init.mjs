@@ -16,10 +16,10 @@ try {
 
 const packageJson = JSON.parse(await readFile(packageFile, "utf8"));
 if (
-  !packageJson.dependencies?.["@zakaihamilton/ui-preview-kit"] &&
-  !packageJson.devDependencies?.["@zakaihamilton/ui-preview-kit"]
+  !packageJson.dependencies?.["ui-preview-kit"] &&
+  !packageJson.devDependencies?.["ui-preview-kit"]
 ) {
-  console.error("Install @zakaihamilton/ui-preview-kit first.");
+  console.error("Install ui-preview-kit first.");
   process.exit(1);
 }
 
@@ -59,7 +59,7 @@ const page = [
 const client = [
   '"use client";', "",
   'import { useState } from "react";',
-  'import { PreviewDropdown, PreviewToolbar } from "@zakaihamilton/ui-preview-kit";',
+  'import { PreviewDropdown, PreviewToolbar } from "ui-preview-kit";',
   'import styles from "./page.module.css";', "",
   'const screens = [{ value: "overview", label: "Overview" }, { value: "settings", label: "Settings" }];',
   'const scenarios = [{ value: "populated", label: "Populated" }, { value: "empty", label: "Empty" }];', "",

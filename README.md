@@ -1,5 +1,9 @@
 # UI Preview Kit
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zakaihamilton/ui-preview-kit/main/assets/ui-preview-icon.svg" alt="UI Preview icon" width="88" height="88" />
+</p>
+
 A shared React package for building consistent, isolated UI previews across applications. It provides the preview toolbar, custom dropdowns, shared SVG icon, and a starter route scaffold so teams can preview real interface patterns without routing through login or connecting to live user data.
 
 ## Why use it

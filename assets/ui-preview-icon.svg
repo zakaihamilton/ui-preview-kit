@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" role="img" aria-labelledby="ui-preview-title">
+  <title id="ui-preview-title">UI Preview</title>
+  <rect x="2.75" y="3.25" width="18.5" height="17.5" rx="3.5" fill="none" stroke="#2563eb" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M3.25 8.5h17.5" fill="none" stroke="#2563eb" stroke-width="1.9" stroke-linecap="round" />
+  <circle cx="6.1" cy="5.9" r="0.55" fill="#2563eb" />
+  <circle cx="8.5" cy="5.9" r="0.55" fill="#2563eb" />
+  <circle cx="10.9" cy="5.9" r="0.55" fill="#2563eb" />
+  <path d="M6.2 11.8h1.9M6.2 14.7h1.9M6.2 17.6h1.9" fill="none" stroke="#2563eb" stroke-width="1.7" stroke-linecap="round" />
+  <rect x="10.1" y="10.8" width="8.15" height="7.9" rx="1.7" fill="#dbeafe" />
+  <path d="m14.18 12.1.9 1.82 1.82.9-1.82.9-.9 1.82-.9-1.82-1.82-.9 1.82-.9z" fill="#1d4ed8" />
+</svg>

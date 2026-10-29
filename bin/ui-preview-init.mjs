@@ -15,8 +15,10 @@ try {
 }
 
 const packageJson = JSON.parse(await readFile(packageFile, "utf8"));
-if (!packageJson.dependencies?.["@zakaihamilton/ui-preview-kit"] &&
-    !packageJson.devDependencies?.["@zakaihamilton/ui-preview-kit"]) {
+if (
+  !packageJson.dependencies?.["@zakaihamilton/ui-preview-kit"] &&
+  !packageJson.devDependencies?.["@zakaihamilton/ui-preview-kit"]
+) {
   console.error("Install @zakaihamilton/ui-preview-kit first.");
   process.exit(1);
 }
@@ -46,13 +48,22 @@ try {
 await mkdir(routeDir, { recursive: true });
 const nl = String.fromCharCode(10);
 const page = [
+  'import { notFound } from "next/navigation";',
+  'import PreviewClient from "./preview-client";', "",
+  "export default function UiPreviewPage() {",
+  '  if (process.env.NODE_ENV !== "development") notFound();',
+  "  return <PreviewClient />;",
+  "}",
+  ""
+].join(nl);
+const client = [
   '"use client";', "",
   'import { useState } from "react";',
   'import { PreviewDropdown, PreviewToolbar } from "@zakaihamilton/ui-preview-kit";',
   'import styles from "./page.module.css";', "",
   'const screens = [{ value: "overview", label: "Overview" }, { value: "settings", label: "Settings" }];',
   'const scenarios = [{ value: "populated", label: "Populated" }, { value: "empty", label: "Empty" }];', "",
-  "export default function UiPreviewPage() {",
+  "export default function PreviewClient() {",
   '  const [screen, setScreen] = useState("overview");',
   '  const [scenario, setScenario] = useState("populated");',
   "  return (",
@@ -79,5 +90,6 @@ const css = [
   ""
 ].join(nl);
 await writeFile(pageFile, page, "utf8");
+await writeFile(path.join(routeDir, "preview-client.tsx"), client, "utf8");
 await writeFile(path.join(routeDir, "page.module.css"), css, "utf8");
-console.log("Created " + path.relative(root, pageFile) + " and page.module.css.");
+console.log("Created " + path.relative(root, pageFile) + ", preview-client.tsx, and page.module.css.");

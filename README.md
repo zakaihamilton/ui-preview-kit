@@ -6,7 +6,7 @@ The package owns presentation only. Each consuming application owns its preview 
 
 ## Install in an existing Next.js project
 
-    pnpm add github:zakaihamilton/ui-preview-kit#v0.1.0
+    pnpm add github:zakaihamilton/ui-preview-kit#v0.1.1
     pnpm exec ui-preview-init
 
 The initializer creates a development-only starter /ui-preview route under src/app or app. It stops without changing files if the project already has that route. Customize the generated sample to use safe synthetic fixtures and the app's own preview guard.

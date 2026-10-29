@@ -1,0 +1,37 @@
+{
+  "name": "@zakaihamilton/ui-preview-kit",
+  "version": "0.1.0",
+  "description": "Shared toolbar, icon, and dropdown components for local UI previews.",
+  "packageManager": "pnpm@10.33.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "bin": {
+    "ui-preview-init": "./bin/ui-preview-init.mjs"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "peerDependencies": {
+    "react": ">=19.0.0 <20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node scripts/copy-assets.mjs"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "typescript": "^5.9.3"
+  }
+}

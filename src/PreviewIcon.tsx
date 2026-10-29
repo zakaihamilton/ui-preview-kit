@@ -5,22 +5,37 @@ export function PreviewIcon() {
     <svg
       aria-label="UI Preview"
       role="img"
-      width="18"
-      height="18"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.6"
+      strokeWidth="1.9"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
       <title>UI Preview</title>
-      <rect x="3" y="4" width="18" height="16" rx="3" />
-      <path d="M3.5 8.5h17" />
-      <circle cx="6.5" cy="6.2" r="0.45" fill="currentColor" stroke="none" />
-      <circle cx="8.5" cy="6.2" r="0.45" fill="currentColor" stroke="none" />
-      <path d="M8.1 14.2c1-1.35 2.3-2.05 3.9-2.05s2.9.7 3.9 2.05c-1 1.35-2.3 2.05-3.9 2.05s-2.9-.7-3.9-2.05Z" />
-      <circle cx="12" cy="14.2" r="1.05" fill="currentColor" stroke="none" />
+      <rect x="2.75" y="3.25" width="18.5" height="17.5" rx="3.5" />
+      <path d="M3.25 8.5h17.5" />
+      <circle cx="6.1" cy="5.9" r="0.55" fill="currentColor" stroke="none" />
+      <circle cx="8.5" cy="5.9" r="0.55" fill="currentColor" stroke="none" />
+      <circle cx="10.9" cy="5.9" r="0.55" fill="currentColor" stroke="none" />
+      <path d="M6.2 11.8h1.9M6.2 14.7h1.9M6.2 17.6h1.9" strokeWidth="1.7" />
+      <rect
+        x="10.1"
+        y="10.8"
+        width="8.15"
+        height="7.9"
+        rx="1.7"
+        fill="currentColor"
+        fillOpacity="0.14"
+        stroke="none"
+      />
+      <path
+        d="m14.18 12.1.9 1.82 1.82.9-1.82.9-.9 1.82-.9-1.82-1.82-.9 1.82-.9z"
+        fill="currentColor"
+        stroke="none"
+      />
     </svg>
   );
 }

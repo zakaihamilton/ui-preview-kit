@@ -26,7 +26,7 @@ The package owns presentation components. It does not own an application’s rou
 From the root of a Next.js project using the App Router:
 
 ```sh
-pnpm add ui-preview-kit@^0.1.2
+pnpm add ui-preview-kit@^0.1.3
 pnpm exec ui-preview-init
 ```
 
@@ -103,7 +103,7 @@ Requirements:
 - If middleware redirects every unauthenticated request to login, add only a narrowly scoped exception for `/ui-preview` in development. Do not allow that exception in production or for other routes.
 - Reuse presentational UI components where practical. If they require auth context, provide a preview-only mock provider or wrapper; do not change the real provider or inject mock data globally.
 - Use synthetic fixtures only. Do not read real user data, call authenticated or production APIs, or submit forms or mutations. Make preview actions no-ops or simulated actions and explain that they are simulated.
-- Install `ui-preview-kit@^0.1.2` from npm if it is not already installed. Use `PreviewToolbar`, `PreviewDropdown`, and the shared “UI Preview” icon for the preview controls; keep page-specific fixtures and state in this application.
+- Install `ui-preview-kit@^0.1.3` from npm if it is not already installed. Use `PreviewToolbar`, `PreviewDropdown`, and the shared “UI Preview” icon for the preview controls; keep page-specific fixtures and state in this application.
 - Preserve existing routes and visual behavior. Add or update focused tests for the preview controls and route guard.
 
 After implementation, report the files changed, how the preview stays separate from login/authentication, and the checks you ran. Do not claim production safety unless the production route guard was verified.

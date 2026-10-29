@@ -16,6 +16,15 @@ A preview route is useful for reviewing screens, states, and design changes quic
 - **Safer to explore:** apps can show synthetic fixtures and simulated actions in a route that is separate from login and protected product flows.
 - **Simple to extend:** each application keeps control of its own screens, fixtures, preview state, and route behavior.
 
+## Key Advantages
+
+- **Zero-Friction UI Development:** Test and iterate on visual components without navigating multi-step application journeys, setting up user sessions, or seeding databases.
+- **Isolated & Safe by Design:** Keeps synthetic fixtures and mock behaviors strictly isolated in a dedicated development route (`/ui-preview`) protected with `notFound()` in production, preventing test harnesses or dummy content from leaking into production builds.
+- **Deep-Linkable Scenario Testing:** Supports instant switching between distinct UI states (e.g. *empty*, *loading*, *populated*, *error*, or different permission tiers) and syncs selections directly with URL query params for shareable and bookmarkable preview links.
+- **No Heavy External Harnesses:** Unlike standalone component workbenches that require separate build configs, dev servers, and duplicate bundler tooling, `ui-preview-kit` lives natively inside your existing application shell and runtime environment.
+- **Theme & Layout Agnostic:** Seamlessly toggle between dark and light themes, card vs. full-width toolbar variants, and custom viewports while leveraging your application's actual CSS variables and design tokens.
+- **Zero Runtime Dependencies:** Built as a clean, tree-shakeable presentation package with no runtime baggage beyond React, shipping compiled CSS and ready-to-use TypeScript definitions.
+
 ## What’s included
 
 - `PreviewToolbar` — a shared toolbar with the title, subtitle, optional note and utilities, plus bar or card variants and light or dark themes.
